@@ -30,6 +30,7 @@ sudo systemctl stop mariadb.service
 sudo systemctl start mariadb.service
 sudo systemctl enable mariadb.service
 sudo mysql_secure_installation
+1234
 
 sudo mysql -u root -p
 #Install PHP 7.4

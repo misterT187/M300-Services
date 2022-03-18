@@ -1,36 +1,33 @@
+# -*- mode: ruby -*-
+
+# vi: set ft=ruby :
+
+
+
+# All Vagrant configuration is done below.
 
 Vagrant.configure("2") do |config|
+
   config.vm.box = "ubuntu/xenial64"
-  config.vm.box_version = "v20211001.0.0"
-  config.vm.provider = "virtualbox"
-  config.vm.provision = "shell", inline: <<-SHELL
-  
-  sudo yum -y install httpd php php-pdo mysql-server php-mysql yasm wget
 
-	sudo chkconfig httpd on
-	sudo service httpd start
-	
-	sudo chkconfig mysqld on
-	sudo service mysqld start
+  config.vm.box_version = "20211001.0.0"
 
-#	GRANT ALL PRIVILEGES ON ampache.* TO ampache@localhost IDENTIFIED BY 'ampache' WITH GRANT OPTION;
+    config.vm.network "private_network", ip: "192.168.11.22"
 
-	git clone git://source.ffmpeg.org/ffmpeg.git ffmpeg
-	cd ffmpeg
-	sh configure
-	sudo make install
+    config.vm.synced_folder ".", "/vagrant", disabled: true
 
-	cd
-	wget https://github.com/ampache/ampache/archive/master.tar.gz
-	tar xvfz master.tar.gz
-	sudo mv ampache-master /var/www/html/
-	cd /var/www/html/ampache-master
-	sudo chmod a+w config
-	sudo chmod a+w rest
-	sudo chmod a+w play
+    config.vm.provider "virtualbox"
 
-	# http://localhost/ampache-master/
+    config.vm.provision "shell", inline: <<-SHELL
 
-# for ampache
+    sudo apt-get update
+
+    sudo apt-get -y install yum
+
+    yum install -y http://mirror.nethserver.org/nethserver/nethserver-release-7.rpm
+
 SHELL
+
 end
+
+

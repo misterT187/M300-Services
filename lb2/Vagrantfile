@@ -47,6 +47,7 @@ EXIT;
 #Install Ampache
 cd /tmp
 wget https://github.com/ampache/ampache/releases/download/4.1.1/ampache-4.1.1_all.zip
+sudo apt install -y unzip
 sudo unzip ampache-4.1.1_all.zip -d /var/www/ampache
 sudo chown -R www-data:www-data /var/www/ampache/
 sudo chmod -R 755 /var/www/ampache/

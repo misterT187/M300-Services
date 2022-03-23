@@ -1,53 +1,13 @@
-# -*- mode: ruby -*-
-
-# vi: set ft=ruby :
-
-
-
-# All Vagrant configuration is done below.
-
-Vagrant.configure("2") do |config|
-
+Vagrant.configure(2) do |config|
   config.vm.box = "ubuntu/xenial64"
-
-  config.vm.box_version = "20211001.0.0"
-
-    config.vm.network "private_network", ip: "192.168.11.22"
-
-    config.vm.synced_folder ".", "/vagrant", disabled: true
-
-    config.vm.provider "virtualbox"
-
-    config.vm.provision "shell", inline: <<-SHELL
-
-    sudo apt update
-    sudo apt install -y yum
-    sudo yum -y install httpd php php-pdo mysql-server php-mysql yasm wget
-
-    sudo chkconfig httpd on
-    sudo service httpd start
-    
-    sudo chkconfig mysqld on
-    sudo service mysqld start
-  
-  #	GRANT ALL PRIVILEGES ON ampache.* TO ampache@localhost IDENTIFIED BY 'ampache' WITH GRANT OPTION;
-  
-    git clone git://source.ffmpeg.org/ffmpeg.git ffmpeg
-    cd ffmpeg
-    sh configure
-    sudo make install
-  
-    cd
-    wget https://github.com/ampache/ampache/archive/master.tar.gz
-    tar xvfz master.tar.gz
-    sudo mv ampache-master /var/www/html/
-    cd /var/www/html/ampache-master
-    sudo chmod a+w config
-    sudo chmod a+w rest
-    sudo chmod a+w play
-
-SHELL
-
+  config.vm.network "forwarded_port", guest:80, host:100, auto_correct: true
+  config.vm.synced_folder ".", "/var/www/html"  
+config.vm.provider "virtualbox" do |vb|
+  vb.memory = "512"  
 end
-
+config.vm.provision "shell", inline: <<-SHELL 
+  sudo apt-get update
+  sudo apt-get -y install apache2 
+SHELL
+end
 

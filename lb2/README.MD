@@ -1,4 +1,4 @@
-# M300-Services
+# M300 LB2
 Plattforübergreifende Dienste in ein Netzwerk integrieren
 
 ## Autor
@@ -12,8 +12,8 @@ Thomas Mägerle
     - [Markdown](#markdown)
     - [Vagrant](#vagrant)
     - [Befehle](#Befehle)
-    - [Was ist Nginx?](#wasistnginx)
-    - [Was ist UFW](#wasistufw)
+    - [Nginx](#nginx)
+    - [UFW](#ufw)
 - [Netzwerkplan](#netzwerkplan)
 - [Quellenverzeichnis](#quellenverzeichnis)
 
@@ -85,13 +85,27 @@ Vagrant ist eine freie Ruby-Anwendung zum Erstellen und Verwalten virtueller Mas
 | ```vagrant halt```      | Stoppt die laufende Virtuelle Maschine. |
 | ```vagrant destroy```   | Stoppt die Virtuelle Maschine und zerstört sie. |
 
-<a name="wasistnginx"></a>
-### Was ist Nginx?
+<a name="nginx"></a>
+### Nginx
 Nginx ist eine Webserver-Software welche zusätzlich auch noch Reverse Proxy und E-Mail-Proxy unterstützt.
 
-<a name="wasistufw"></a>
-### Was ist UFW?
+<a name="ufw"></a>
+### UFW
 UFW steht für Uncomplicated Firewall. Sprich es ist einfach eine sehr einfach zu handhabende Firewall.
+
+<a name="code"></a>
+## Code
+Unten sieht man den verwendeten Code.
+
+
+`Vagrant.configure(2) do |config|`
+
+Welche Ubuntu Version verwendet wird.
+`config.vm.box = "ubuntu/bionic64"`
+
+
+Virtualbox version.
+`config.vm.network "forwarded_port", guest:80, host:100, auto_correct: false`
 
 <a name="netzwerkplan"></a>
 ### Netzwerkplan

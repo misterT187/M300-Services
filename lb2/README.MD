@@ -4,22 +4,23 @@ Plattforübergreifende Dienste in ein Netzwerk integrieren
 ## Autor
 Thomas Mägerle
 
-- [Einführung](#einfuehrung)
-  - [Was ist Apache?](#wasistapache)
-  - [Was ist PHP?](#wasistphp)
+## Inhaltsverzeichnis
+
+- [Git Einrichten](#giteinrichten)
+  - [File bearbeiten](#filebearbeiten)
+  - [Markdown](#markdown)
 - [Code](#Code)
 - [Umgebung](#umgebung)
 - [Anleitung](#anleitung)
 - [Quellenverzeichnis](#quellenverzeichnis)
 
-## Inhaltsverzeichnis
-
+<a name="giteinrichten"></a>
 ### Git Einrichten
 ```
 git config --global user.name "username"
 git config --global user.email "E-Mail"
 ```
-
+<a name="filebearbeiten"></a>
 ### File bearbeiten
 Als erstes muss man das Verzeichnis Klonen:
 ```
@@ -35,7 +36,7 @@ git commit
 git push
 ```
 
-
+<a name="markdown"></a>
 ## Markdown
 Markdown bearbeiten in Code:
 https://code.visualstudio.com/docs/languages/markdown

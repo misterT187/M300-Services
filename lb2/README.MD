@@ -6,13 +6,18 @@ Thomas Mägerle
 
 ## Inhaltsverzeichnis
 
-- [Git Einrichten](#giteinrichten)
-  - [File bearbeiten](#filebearbeiten)
-  - [Markdown](#markdown)
-- [Code](#Code)
-- [Umgebung](#umgebung)
-- [Anleitung](#anleitung)
+-[einführung](#einfuehrung) 
+  -[Git Einrichten](#giteinrichten)
+   - [File bearbeiten](#filebearbeiten)
+   - [Markdown](#markdown)
+   - [Vagrant](#vagrant)
+   - [Befehle](#Befehle)
+- [Netzwerkplan](#netzwerkplan)
 - [Quellenverzeichnis](#quellenverzeichnis)
+
+<a name="einfuehrung"></a>
+## Einführung
+Als erstes werde ich eine kleine Einführung zu git markdown und vagrant geben.
 
 <a name="giteinrichten"></a>
 ### Git Einrichten
@@ -60,3 +65,26 @@ Markdown wird zum darstellen einer Datei gebraucht in einem "Humanen Stil".
 \------ </p>
 <br>
 https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf
+
+<a name="vagrant"></a>
+## Vagrant
+Vagrant ist eine freie Ruby-Anwendung zum Erstellen und Verwalten virtueller Maschinen.[2] Vagrant ermöglicht einfache Softwareverteilung (englisch Deployment) insbesondere in der Software- und Webentwicklung und dient als Wrapper zwischen Virtualisierungssoftware wie VirtualBox, KVM/QEMU, VMware und Hyper-V und Software-Configuration-Management-Anwendungen beziehungsweise Systemkonfigurationswerkzeugen wie Chef, Saltstack und Puppet.
+
+<a name="befehle"></a>
+
+### Befehle
+| Befehl            | Funktion                                             |
+| -------------     | ---------------------------------------------------- | 
+| ```vagrant init```      | Initialisiert im aktuellen Verzeichnis eine Vagrant-Umgebung und erstellt, falls nicht vorhanden, ein Vagrantfile. |
+| ```vagrant up```        | Erzeugt und Konfiguriert eine neue Virtuelle Maschine, basierend auf dem Vagrantfile. |
+| ```vagrant ssh```       | Baut eine SSH-Verbindung zur gewünschten VM auf. |
+| ```vagrant status```    | Zeigt den aktuellen Status der VM an. |
+| ```vagrant port```      | Zeigt die Weitergeleiteten Ports der VM an. |
+| ```vagrant halt```      | Stoppt die laufende Virtuelle Maschine. |
+| ```vagrant destroy```   | Stoppt die Virtuelle Maschine und zerstört sie. |
+
+<a name="netzwerkplan"></a>
+### Netzwerkplan
+
+Bei mir sieht die Config so aus:
+![image](https://user-images.githubusercontent.com/50829674/110802925-f4d4a980-827e-11eb-94ff-dd1340fee389.png)

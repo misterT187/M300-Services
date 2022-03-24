@@ -6,12 +6,12 @@ Thomas Mägerle
 
 ## Inhaltsverzeichnis
 
--[einführung](#einfuehrung) 
-  -[Git Einrichten](#giteinrichten)
-   - [File bearbeiten](#filebearbeiten)
-   - [Markdown](#markdown)
-   - [Vagrant](#vagrant)
-   - [Befehle](#Befehle)
+- [Einführung](#einfuehrung) 
+    - [Git Einrichten](#giteinrichten)
+    - [File bearbeiten](#filebearbeiten)
+    - [Markdown](#markdown)
+    - [Vagrant](#vagrant)
+    - [Befehle](#Befehle)
 - [Netzwerkplan](#netzwerkplan)
 - [Quellenverzeichnis](#quellenverzeichnis)
 

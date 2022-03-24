@@ -12,12 +12,14 @@ Thomas Mägerle
     - [Markdown](#markdown)
     - [Vagrant](#vagrant)
     - [Befehle](#Befehle)
+    - [Was ist Nginx?](#wasistnginx)
+    - [Was ist UFW](#wasistufw)
 - [Netzwerkplan](#netzwerkplan)
 - [Quellenverzeichnis](#quellenverzeichnis)
 
 <a name="einfuehrung"></a>
 ## Einführung
-Als erstes werde ich eine kleine Einführung zu git markdown und vagrant geben.
+Als erstes werde ich eine kleine Einführung über alle wichtigen Services.
 
 <a name="giteinrichten"></a>
 ### Git Einrichten
@@ -83,8 +85,17 @@ Vagrant ist eine freie Ruby-Anwendung zum Erstellen und Verwalten virtueller Mas
 | ```vagrant halt```      | Stoppt die laufende Virtuelle Maschine. |
 | ```vagrant destroy```   | Stoppt die Virtuelle Maschine und zerstört sie. |
 
+<a name="wasistnginx"></a>
+### Was ist Nginx?
+Nginx ist eine Webserver-Software welche zusätzlich auch noch Reverse Proxy und E-Mail-Proxy unterstützt.
+
+<a name="wasistufw"></a>
+### Was ist UFW?
+UFW steht für Uncomplicated Firewall. Sprich es ist einfach eine sehr einfach zu handhabende Firewall.
+
 <a name="netzwerkplan"></a>
 ### Netzwerkplan
 
 Bei mir sieht die Config so aus:
 ![image](https://user-images.githubusercontent.com/50829674/110802925-f4d4a980-827e-11eb-94ff-dd1340fee389.png)
+

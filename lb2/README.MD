@@ -8,13 +8,14 @@ Thomas Mägerle
 
 - [Einführung](#einfuehrung) 
     - [Git Einrichten](#giteinrichten)
-    - [File bearbeiten](#filebearbeiten)
     - [Markdown](#markdown)
     - [Vagrant](#vagrant)
     - [Befehle](#Befehle)
     - [Nginx](#nginx)
     - [UFW](#ufw)
 - [Code](#code)
+- [Anleitung](#anleitung)
+- [Testen](#testen)
 - [Netzwerkplan](#netzwerkplan)
 - [Quellenverzeichnis](#quellenverzeichnis)
 
@@ -27,21 +28,6 @@ Als erstes werde ich eine kleine Einführung über alle wichtigen Services.
 ```
 git config --global user.name "username"
 git config --global user.email "E-Mail"
-```
-<a name="filebearbeiten"></a>
-### File bearbeiten
-Als erstes muss man das Verzeichnis Klonen:
-```
-git clone https://github.com/c7910m/M300-Services/edit/main/README.md
-```
-Es wird in das Verzeichnis kopiert, indem man sich momentan in der Shell befindet.
-
-Nun kann man das heruntergeladene File bearbeiten.
-
-Danach kann man das File wieder hochladen:
-```
-git commit
-git push
 ```
 
 <a name="markdown"></a>
@@ -67,7 +53,6 @@ Markdown wird zum darstellen einer Datei gebraucht in einem "Humanen Stil".
 <p> \Alt-H2 <br>
 \------ </p>
 <br>
-https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf
 
 <a name="vagrant"></a>
 ## Vagrant
@@ -194,9 +179,10 @@ Um zu Testen ob das erstellen der vm mithilfe von Vagrant funktioniert hat, muss
 Wenn folgende Seite zusehen ist hat alles funktioniert.
 
 ![nginx-webserver](https://github.com/misterT187/M300-Services/blob/main/lb2/images/nginx.PNG)
-()<a name="netzwerkplan"></a>
-### Netzwerkplan
 
-Bei mir sieht die Config so aus:
-![image](https://user-images.githubusercontent.com/50829674/110802925-f4d4a980-827e-11eb-94ff-dd1340fee389.png)
+<a name="quellenverzeichnis"></a>
+## Quellenverzeichnis
 
+- Apache: (https://httpd.apache.org/)  
+- Markdown: (https://www.markdownguide.org/cheat-sheet/)
+- Vagrant: (https://gist.github.com/wpscholar/a49594e2e2b918f4d0c4)

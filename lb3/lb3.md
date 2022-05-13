@@ -9,15 +9,20 @@ Thomas Mägerle
     - [Python Flask](#pythonflask)
 - [Service Anwendung](#serviceanwendung)
 - [Grafische Übersicht](#grafiken)
+- [Befehle](#befehle)
+    - [Befehle Images](#befehleimages)
+    - [Befehle Container](#befehlecontainer)
 - [Code Beschreibung](#code)
 - [Service Testen](#testen)
 - [Quellenverzeichnis](#quellenverzeichnis)
 
 <a name="beschrieb"></a>
 ## Service Beschreibung
+Webapplikation mit python flask realisieren
 
 <a name="pythonflask"></a>
 ### Python Flask
+Flask ist ein vom österreichischen Programmierer Armin Ronacher in Python geschriebenes Webframework. Der Fokus von Flask liegt auf Erweiterbarkeit und guter Dokumentation. Die einzigen Abhängigkeiten sind Jinja2, eine Template-Engine, und Werkzeug, eine Bibliothek zum Erstellen von WSGI-Anwendungen. 
 
 <a name="serviceanwendung"></a>
 ## Service Anwendung
@@ -31,10 +36,48 @@ Anschliessend muss nurnoch der Befehl `vagrant up` ausgeführt werden.
 <a name="grafiken"></a>
 ## Grafische Übersicht
 
+<a name="befehle"></a>
+## Befehle
+
+<a name="befehleimages"></a>
+### Befehle Images
+Bei Docker Images folgt der jeweilige Befehl nach "docker image"
+| Befehl            | Funktion                                             |
+| -------------     | ---------------------------------------------------- | 
+| ```build```       | Erstellt ein Image.                                  |
+| ```push```        | Schiebt ein Image auf eine Remoteregistrierung.      |
+| ```pull ```       | Zieht ein Image oder ein Repository von einer Registry.     |
+| ```ls```          | Listet alle vorhandenen Images auf.                  |
+| ```history```     | Zeigt alle Informationen eines Intermediate Image an. |
+| ```inspect```     | Zeigt detaillierte Informationen zu einem Image an, inkl. den einzelnen Layern.                                     |
+| ```rmi```         | Löscht ein Image.                                     |
+
+<a name="befehlecontainer"></a>
+### Befehle Container
+Bei Docker Container folgt der jeweilige Befehl nach "docker container"
+| Befehl            | Funktion                                             |
+| -------------     | ---------------------------------------------------- | 
+| ```create```      | Erstellt einen Container aus einem Image.            |
+| ```start```       | Startet einen existierenden Container.               |
+| ```run```         | Baut eine SSH-Verbindung zur gewünschten VM auf.     |
+| ```ls```          | Zeigt den aktuellen Status der VM an.                |
+| ```inspect```     | Zeigt detaillierte Informationen über einen Container an. |
+| ```logs```        | Druckt logs aus.                                     |
+| ```stop```        | Stoppt einen laufenden Container.                    |
+| ```kill```        | Stoppt den Hauptprozess in einem Container abrupt.   |
+| ```rm```          | Löscht einen gestoppten Container.                   |
 
 <a name="code"></a>
 ## Code Beschreibung
 Hier sieht man den verwendeten Code und die erklärung zu dem jeweiligen Command.
+
+Welche Version verwendet werden soll
+
+    `version: "3"`
+    
+Welche Version verwendet werden soll
+
+    `version: "3"`
 
 <a name="testen"></a>
 ## Service Testen

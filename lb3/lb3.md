@@ -42,6 +42,10 @@ Danach sollte man auf seinem lokalen Browser über die URL 'localhost:5000' auf 
 Mit python-flask und SQL-Alchemy als ORM kann man nun verschiedenste Applikationen und Webseiten bauen.
 Je öfter man den python Container neustarten wird, wird die Datenbank gefühlt, da die Applikation die Tabelle nicht löscht. Um dies nun zu ändern kann man im file app/main.py auf Zeile 46 den "#" heraus löschen. Danach sollten die Tabellen normal gelöscht und wieder gefühlt werden.
 
+<a name="grafiken"></a>
+## Netzwerkplan  
+![Netzwerkplan](https://github.com/misterT187/M300-Services/blob/main/lb3/nw.PNG)
+
 
 <a name="befehle"></a>
 ## Befehle

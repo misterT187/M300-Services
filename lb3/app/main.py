@@ -11,13 +11,13 @@ from sqlalchemy import create_engine
 app = Flask(__name__)
 # Alchemy database connection
 # All the informations are saved in the config.yaml file. You have to make one by your own
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://sven:sven@localhost/lb3_db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:root@lb3_db/lb3'
 # Route/View für Login-Page
 app.secret_key = 'lb3'
 # MySQL Database Connection
 db = SQLAlchemy(app)
 
-engine = create_engine('mysql://sven:sven@localhost/lb3_db')
+engine = create_engine('mysql://root:root@lb3_db/lb3')
 
 class user(db.Model):
     id = db.Column(db.Integer, unique=True, primary_key=True)
@@ -43,7 +43,7 @@ def index():
     return render_template('index.html', users=users)
 
 if __name__ == "__main__":
-    clear_tables()
+    #clear_tables()
     db.create_all()
     insert_user()
     app.run(debug=True)

@@ -75,9 +75,50 @@ Welche Version verwendet werden soll
 
     `version: "3"`
     
-Welche Version verwendet werden soll
+Netzwerk angeben
 
-    `version: "3"`
+    `networks:`
+    `lb3_network:`
+
+Volumes angeben
+
+    `volumes:
+        app:
+        database:`
+
+flask-app Container erstellen und Konfigurieren
+    
+    `services:
+     flask-app:
+         container_name: lb3_py
+         build: app
+         restart: always
+         ports:
+             - '5000:5000'
+         volumes:
+             - ./app:/app
+         networks:
+             - lb3_network`
+
+             
+mysql-db Container erstellen und Konfigurieren
+    
+    `mysql-db:
+        container_name: lb3_db
+        image: mysql:latest
+        restart: always
+        environment:
+            MYSQL_ROOT_PASSWORD: root
+            MYSQL_DATABASE: lb3
+        ports:
+            - '3306:3306'
+        volumes:
+            - ./database:/var/lib/mysql
+        networks:
+            - lb3_network`
+
+
+
 
 <a name="testen"></a>
 ## Service Testen
@@ -86,3 +127,5 @@ Wenn folgende Seite zusehen ist hat alles funktioniert.
 
 <a name="quellenverzeichnis"></a>
 ## Quellenverzeichnis
+[Python Flask](https://flask.palletsprojects.com/en/2.1.x/)  
+[Markdown Guide](https://www.markdownguide.org/basic-syntax/)

@@ -124,6 +124,7 @@ mysql-db Container erstellen und Konfigurieren
 ## Service Testen
 Um zu Testen ob das erstellen der vm mithilfe von Vagrant funktioniert hat, muss im Browser die seite localhost:100 aufgerufen werden. 
 Wenn folgende Seite zusehen ist hat alles funktioniert.
+![website](https://github.com/misterT187/M300-Services/blob/main/lb3/website.PNG)
 
 <a name="quellenverzeichnis"></a>
 ## Quellenverzeichnis

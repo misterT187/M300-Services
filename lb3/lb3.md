@@ -44,7 +44,7 @@ Je öfter man den python Container neustarten wird, wird die Datenbank gefühlt,
 
 <a name="grafiken"></a>
 ## Netzwerkplan  
-![Netzwerkplan](https://github.com/misterT187/M300-Services/blob/main/lb3/nw.PNG)
+![Netzwerkplan](https://github.com/misterT187/M300-Services/blob/main/lb3/nw.png)
 
 
 <a name="befehle"></a>

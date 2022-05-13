@@ -18,7 +18,7 @@ Thomas Mägerle
 
 <a name="beschrieb"></a>
 ## Service Beschreibung
-Webapplikation mit python flask realisieren
+In einem Dreierteam (Sven Scheuss, Sukash Sugumaran und Thomas Mägerle) haben wir dieses Projekt durchgeführt. Wir haben uns überlegt eine Website zu hosten. Wir haben mit dem Tool Python Flask gearbeitet, da Sven Scheuss viel Erfahrung damit hat. Zusätzlich verwenden wir noch MySQL.
 
 <a name="pythonflask"></a>
 ### Python Flask
@@ -122,7 +122,7 @@ mysql-db Container erstellen und Konfigurieren
 
 <a name="testen"></a>
 ## Service Testen
-Um zu Testen ob das erstellen der vm mithilfe von Vagrant funktioniert hat, muss im Browser die seite localhost:100 aufgerufen werden. 
+Um zu Testen ob das erstellen der vm mithilfe von Vagrant funktioniert hat, muss im Browser die seite localhost:5000 aufgerufen werden. 
 Wenn folgende Seite zusehen ist hat alles funktioniert.
 ![website](https://github.com/misterT187/M300-Services/blob/main/lb3/Website.PNG)
 
